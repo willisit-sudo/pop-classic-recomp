@@ -1,10 +1,22 @@
-# Prince of Persia Classic native test build
+# Prince of Persia Classic for Windows and Linux
 
-Build the Xbox 360 release locally from your own extracted game files. This kit contains the
-host app, its Controls and Display panel, and a build script. The build script generates the
-game-specific C++ and native executable locally.
+**Download a prebuilt player and run it. No compiler or build tools needed.** You’ll need your own extracted Xbox 360 copy of Prince of Persia Classic, with `default.xex` and the accompanying game files in the same folder.
 
-## What you need
+| Platform | Download | Run after extracting |
+| --- | --- | --- |
+| Windows x64 | [Windows Player ZIP](https://github.com/willisit-sudo/pop-classic-recomp/releases/download/v0.1.0-preview/PoP-Classic-Windows-Player.zip) | `Play Prince of Persia Classic.exe` |
+| Linux x64 / Steam Deck | [Linux Player tar.gz](https://github.com/willisit-sudo/pop-classic-recomp/releases/download/v0.1.0-preview/PoP-Classic-Linux-Player.tar.gz) | `Play.sh` |
+
+On first launch, select the folder containing `default.xex`. The launcher remembers it for next time. Press **F2** in-game for Controls and Display. For built-in Deck controls, add `Play.sh` as a non-Steam game and select Steam’s **Gamepad** layout.
+
+These are preview builds. See the [release notes](https://github.com/willisit-sudo/pop-classic-recomp/releases/tag/v0.1.0-preview) and [platform notes](PLATFORM-NOTES.md) for testing details.
+
+## Build from source (optional)
+
+The repository contains the host app, its Controls and Display panel, and a build script that generates the native executable from your extracted game files.
+
+### Build prerequisites
+
 
 - The extracted Xbox 360 game folder containing `default.xex` and the accompanying assets.
 - The [ReXGlue v0.11.0 SDK](https://github.com/rexglue/rexglue-sdk/releases/tag/v0.11.0)
@@ -21,7 +33,7 @@ The script validates the executable by SHA-256 before running code generation.
 
 See [platform notes](PLATFORM-NOTES.md) for verified behavior and open test areas.
 
-## Build and play
+### Build and run
 
 On Linux, from the extracted kit folder:
 
